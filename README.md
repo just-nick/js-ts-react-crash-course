@@ -17,9 +17,7 @@ I make a lot of claims about why things are the way they are, but none of this i
 ## 01. NodeJS
 Back at some point in 2009 people tarted talking about how JS could be brought to the server side. In it's original state, JavaScript simply wouldn't work and so, a new standard emerged named CommonJS (formerly ServerJS).
 
-NodeJS was built ontop of this standard and with it came the ability to write true modular code in JavaScript. In this world, ever single file is considered a module, and ever module is inherently loaded as a singleton.
-
-On top of this came NPM, Node Package Manager. Now JavaScript had a way to define external dependencies and a place to go find them.
+NodeJS was built ontop of this standard.
 
 ### Install NodeJS
 If you don't already have it installed, go to https://nodejs.org/en/ and download the latest LTS version.
@@ -48,7 +46,9 @@ node index.js
 
 ## 02. Modular code
 ### Writing our first module
-Great! But what about that module stuff we were talking about earlier? Let's create a new mew module called `answers.js` and add the following code.
+One of the improvements CommonJS brought was the ability to write true modular code in JavaScript. In this world, ever single file is considered a module, and ever module is inherently loaded as a singleton.
+
+Let's create a new mew module called `answers.js` and add the following code.
 
 ```js
 module.exports = { getAnswer };
@@ -112,7 +112,9 @@ There are lots of rules around how coercion works but we won't waste our time on
 TypeScript is a superset of JavaScript that compiles back down to standard JavaScript. The main purpose of the language is to add strict typing to the language. It is not the first language that added typing to JavaScript, however one thing it does differently is that it tries to make the absolute minimal changes to the language to add types.
 
 ### Add TypeScript
-Let's go ahead and add typescript to our package. To do that we will use node package manager to install `typescript` and `ts-node` as developer dependencies. (TS Node is a helper that will compile into memory and then run NodeJS)
+One of the other things that Node gave us is NPM, Node Package Manager. This gives JavaScript a way to define external dependencies and a place to go find them.
+
+Let's go ahead and add TypeScript to our package. To do that we will use node package manager to install `typescript` and `ts-node` as developer dependencies. (TS Node is a helper that will compile into memory and then run NodeJS)
 
 ```sh
 npm i typescript ts-node -D
