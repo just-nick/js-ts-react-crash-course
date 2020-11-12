@@ -11,7 +11,34 @@ const AnswerComponent: React.FunctionComponent<AnswerProps> = (prop) => {
     </div>
 };
 
+interface PageState {
+    answer: number;
+}
+class PageComponent extends React.Component<{}, PageState> {
+    constructor() {
+        super({});
+
+        this.state = {
+            answer: getAnswer()
+        }
+    }
+
+    public render() {
+        return <div>
+            <h1>The best app</h1>
+            <AnswerComponent answer={this.state.answer} />
+            <button onClick={() => this.updateAnswer()}>Button</button>
+        </div>
+    }
+
+    public updateAnswer() {
+        this.setState({
+            answer: getAnswer()
+        });
+    }
+}
+
 render(
-    <AnswerComponent answer={getAnswer()} />,
+    <PageComponent />,
     document.getElementById("app")
 )
