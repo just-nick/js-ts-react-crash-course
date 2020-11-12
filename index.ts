@@ -1,4 +1,4 @@
-const { getAnswer } = require("./answers");
+import { getAnswer } from "./answers";
 
 const answer = getAnswer();
 const answer2 = getAnswer();
