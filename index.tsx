@@ -11,30 +11,17 @@ const AnswerComponent: React.FunctionComponent<AnswerProps> = (prop) => {
     </div>
 };
 
-interface PageState {
-    answer: number;
-}
-class PageComponent extends React.Component<{}, PageState> {
-    constructor() {
-        super({});
+const PageComponent: React.FunctionComponent = () => {
+    const [answer, setAnswer] = React.useState(() => getAnswer());
 
-        this.state = {
-            answer: getAnswer()
-        }
-    }
+    return <div>
+        <h1>The best app</h1>
+        <AnswerComponent answer={answer} />
+        <button onClick={() => updateAnswer()}>Button</button>
+    </div>
 
-    public render() {
-        return <div>
-            <h1>The best app</h1>
-            <AnswerComponent answer={this.state.answer} />
-            <button onClick={() => this.updateAnswer()}>Button</button>
-        </div>
-    }
-
-    public updateAnswer() {
-        this.setState({
-            answer: getAnswer()
-        });
+    function updateAnswer() {
+        setAnswer(getAnswer());
     }
 }
 
