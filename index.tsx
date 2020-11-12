@@ -2,11 +2,16 @@ import React from "react";
 import { render } from "react-dom";
 import { getAnswer } from "./answers";
 
-const answer = getAnswer();
-const answer2 = getAnswer();
-const answer3 = getAnswer();
+interface AnswerProps {
+    answer: number;
+}
+const AnswerComponent: React.FunctionComponent<AnswerProps> = (prop) => {
+    return <div>
+        Answer: <strong>{prop.answer}</strong>
+    </div>
+};
 
 render(
-    <div>The answers are {answer}, {answer2} and {answer3}!</div>,
+    <AnswerComponent answer={getAnswer()} />,
     document.getElementById("app")
 )
