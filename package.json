@@ -1,0 +1,34 @@
+{
+  "name": "learning-ts",
+  "version": "1.0.0",
+  "description": "With the advent of NodeJS, TypeScript and many competing frameworks over the past 10 years, the frontend landscape has changed drastically.",
+  "main": "webpack.config.js",
+  "dependencies": {
+    "node-ts": "^5.1.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-redux": "^7.2.2",
+    "redux": "^4.0.5",
+    "ts-loader": "^8.0.11",
+    "ts-node": "^9.0.0",
+    "typescript": "^4.0.5",
+    "webpack-cli": "^4.2.0",
+    "webpack-dev-server": "^3.11.0",
+    "webpack": "^5.4.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/just-nick/js-ts-react-crash-course.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/just-nick/js-ts-react-crash-course/issues"
+  },
+  "homepage": "https://github.com/just-nick/js-ts-react-crash-course#readme"
+}
